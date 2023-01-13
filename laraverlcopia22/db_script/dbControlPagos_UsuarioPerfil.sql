@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.26, for macos11 (x86_64)
+--
+-- Host: 34.208.193.210    Database: dbControlPagos
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `UsuarioPerfil`
+--
+
+DROP TABLE IF EXISTS `UsuarioPerfil`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `UsuarioPerfil` (
+  `id_usuarioperfil` int NOT NULL AUTO_INCREMENT,
+  `id_usuario` int DEFAULT NULL,
+  `id_perfil` int DEFAULT NULL,
+  `activo` tinyint(1) DEFAULT NULL,
+  `eliminado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id_usuarioperfil`),
+  KEY `perfil` (`id_perfil`),
+  KEY `fk_usuario` (`id_usuario`)
+) ENGINE=MyISAM AUTO_INCREMENT=137 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `UsuarioPerfil`
+--
+
+LOCK TABLES `UsuarioPerfil` WRITE;
+/*!40000 ALTER TABLE `UsuarioPerfil` DISABLE KEYS */;
+INSERT INTO `UsuarioPerfil` VALUES (1,1,1,1,0),(2,2,2,1,0),(3,10,5,1,0),(4,6,6,1,0),(5,10,3,1,0),(6,6,4,1,0),(7,4,1,1,1),(8,12,3,1,1),(9,11,2,1,0),(10,16,6,1,0),(11,17,5,1,0),(12,4,2,1,0),(13,4,5,1,0),(14,17,2,1,1),(15,14,9,1,0),(16,5,2,1,0),(17,5,5,1,0),(18,18,1,1,0),(19,18,5,1,0),(20,18,9,1,0),(21,19,9,1,0),(22,2,10,1,0),(23,4,10,1,0),(24,5,10,1,0),(25,10,10,1,0),(26,11,10,1,0),(27,15,10,1,0),(28,17,10,1,0),(29,18,10,1,0),(30,19,10,1,0),(31,20,5,1,0),(32,20,10,1,0),(33,2,3,1,1),(34,2,4,1,0),(35,2,5,1,0),(36,2,6,1,0),(37,2,9,1,0),(38,5,9,1,0),(39,20,9,1,0),(40,21,9,1,0),(41,21,10,1,0),(42,22,9,1,0),(43,22,10,1,0),(44,23,9,1,0),(45,23,10,1,0),(46,24,9,1,0),(47,24,10,1,0),(48,12,9,1,1),(49,12,11,1,0),(50,25,11,1,0),(51,26,11,1,0),(52,28,10,1,0),(53,27,5,1,0),(54,27,10,1,0),(55,29,1,0,1),(56,23,1,1,0),(57,29,2,0,1),(58,29,3,1,1),(59,29,11,1,0),(60,2,11,1,0),(61,29,1,1,0),(62,29,2,1,0),(63,30,12,1,0),(64,28,6,1,0),(65,28,12,1,0),(66,31,11,0,1),(67,32,2,1,0),(68,33,5,1,1),(69,33,6,1,1),(70,33,9,1,1),(71,33,11,1,1),(72,33,5,1,1),(73,33,12,1,1),(74,33,9,1,0),(75,33,2,1,1),(76,33,10,1,0),(77,33,2,1,1),(78,33,2,1,1),(79,33,11,1,1),(80,28,11,1,1),(81,34,11,1,0),(82,33,1,1,1),(83,33,4,1,1),(84,33,5,1,1),(85,33,6,1,1),(86,35,11,1,1),(87,35,12,1,1),(88,33,5,0,0),(89,35,5,1,0),(90,32,9,1,0),(91,32,11,1,0),(92,32,11,1,0),(93,32,1,1,0),(94,32,4,1,0),(95,32,5,1,0),(96,32,6,1,0),(97,32,10,1,0),(98,27,12,1,1),(99,35,9,1,0),(100,35,12,1,1),(101,33,12,1,1),(102,36,12,1,0),(103,31,12,0,1),(104,25,10,1,0),(105,37,11,1,0),(106,2,13,0,0),(107,32,13,1,0),(108,38,5,1,0),(109,38,10,1,0),(110,25,13,1,0),(111,36,5,1,1),(112,2,15,0,0),(113,38,15,1,0),(114,39,14,1,0),(115,2,14,0,0),(116,27,15,1,0),(117,40,14,1,0),(118,31,5,0,1),(119,31,10,0,1),(120,31,15,0,1),(121,2,1,1,0),(122,2,12,1,0),(123,2,12,1,0),(124,31,12,1,1),(125,31,10,1,0),(126,37,13,1,0),(127,23,2,1,0),(128,23,4,1,0),(129,41,1,1,0),(130,41,9,1,0),(131,41,10,1,0),(132,41,2,1,0),(133,41,4,1,0),(134,41,5,1,1),(135,31,16,1,0),(136,42,16,1,0);
+/*!40000 ALTER TABLE `UsuarioPerfil` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-04-19 11:47:24
